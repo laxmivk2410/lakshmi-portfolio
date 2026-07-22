@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Work — Laxmi Sharma | UX Designer</title>
+<meta name="description" content="UX case studies by Laxmi Sharma — enterprise platforms, gaming products, mobile apps and dashboards."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0A0F1E;--white:#fff;--off:#F8FAFC;--blue:#4F8EF7;--bdim:#3B7BF0;--bglow:rgba(79,142,247,.14);--amber:#F59E0B;--purple:#8B5CF6;--green:#10B981;--t1:#0A0F1E;--t2:#475569;--tm:#94A3B8;--border:#E2E8F0;--bdark:rgba(255,255,255,.08);--fd:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif;--ease:cubic-bezier(0.22,1,0.36,1)}
+html{scroll-behavior:smooth}body{font-family:var(--fb);color:var(--t1);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,15,30,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bdark)}
+.logo{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em}.logo span{color:var(--blue)}
+.nl{display:flex;align-items:center;gap:32px;list-style:none}.nl a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}.nl a:hover,.nl a.act{color:#fff}
+.ncta{padding:9px 22px;background:var(--blue)!important;color:#fff!important;border-radius:100px;font-weight:600!important;font-size:.85rem!important}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hbg span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.mnav{display:none;position:fixed;inset:0;z-index:99;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;gap:36px}.mnav.open{display:flex}
+.mnav a{font-family:var(--fd);font-size:2rem;font-weight:700;color:#fff;text-decoration:none;opacity:.85}.mnav a:hover{opacity:1;color:var(--blue)}
+.phero{padding:140px 48px 80px;background:var(--navy);position:relative;overflow:hidden}
+.phgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at 60% 50%,black 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 60% 50%,black 0%,transparent 70%)}
+.phi{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.pey{font-size:.72rem;font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:block;font-family:var(--fb)}
+.pt{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+.pt em{font-style:normal;color:var(--blue)}
+.ps{font-size:1.1rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:560px}
+.sec{padding:88px 48px}.inn{max-width:1200px;margin:0 auto}
+.note{background:#FFFBEB;border:1px solid #FDE68A;border-radius:14px;padding:18px 24px;margin-bottom:44px;display:flex;align-items:flex-start;gap:12px}
+.note-icon{font-size:1.1rem;flex-shrink:0;padding-top:2px}
+.note-text{font-size:.875rem;color:#92400E;line-height:1.6;font-family:var(--fb)}
+.note-text strong{font-weight:600}
+.filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:48px}
+.fb2{padding:8px 20px;border-radius:100px;border:1px solid var(--border);background:transparent;font-family:var(--fb);font-size:.85rem;font-weight:500;color:var(--t2);cursor:pointer;transition:all .2s}
+.fb2:hover{border-color:var(--blue);color:var(--blue)}
+.fb2.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.pc{border-radius:24px;overflow:hidden;border:1px solid var(--border);background:#fff;text-decoration:none;color:inherit;display:block;transition:transform .4s var(--ease),box-shadow .4s;opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease),box-shadow .3s}
+.pc.vis{opacity:1;transform:translateY(0)}
+.pc:hover{box-shadow:0 24px 56px rgba(0,0,0,.1);transform:translateY(-6px)!important}
+.pc.wide{grid-column:span 2;display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
+.pth{overflow:hidden;position:relative}
+.pthi{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;transition:transform .5s var(--ease)}
+.pc.wide .pth{height:100%}
+.pc.wide .pthi{aspect-ratio:auto;min-height:300px;height:100%}
+.pc:hover .pthi{transform:scale(1.04)}
+.bg-e{background:linear-gradient(135deg,#0A0F1E,#1E2A3A,#162040)}
+.bg-g{background:linear-gradient(135deg,#1a0533,#2D1B69,#4c1d95)}
+.bg-h{background:linear-gradient(135deg,#052e16,#064e3b,#065f46)}
+.bg-p{background:linear-gradient(135deg,#1c1917,#292524,#1c2a35)}
+.bg-o{background:linear-gradient(135deg,#0c1445,#1e3a5f,#1a4a6b)}
+.bg-d{background:linear-gradient(135deg,#1a0a3a,#2D1B69,#3b1fa3)}
+.pb{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);padding:4px 12px;border-radius:100px;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.06em;text-transform:uppercase;font-family:var(--fb)}
+.plv{position:absolute;top:14px;right:14px;background:var(--green);padding:3px 10px;border-radius:100px;font-size:.65rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:5px;font-family:var(--fb)}
+.ld{width:5px;height:5px;border-radius:50%;background:#fff;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.pi{padding:28px}
+.pc.wide .pi{padding:44px 40px}
+.ptags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.ptag{padding:3px 11px;border-radius:100px;background:#EFF6FF;color:var(--blue);font-size:.7rem;font-weight:600;font-family:var(--fb)}
+.ptag-p{background:#F5F3FF;color:var(--purple)}
+.ptag-g{background:#ECFDF5;color:#059669}
+.ptag-a{background:#FFFBEB;color:#D97706}
+.pco{font-size:.75rem;font-weight:600;color:var(--tm);margin-bottom:8px;font-family:var(--fb);letter-spacing:.04em;text-transform:uppercase}
+.ptt{font-family:var(--fd);font-size:1.2rem;font-weight:800;color:var(--t1);margin-bottom:10px;line-height:1.25;letter-spacing:-.02em}
+.pc.wide .ptt{font-size:1.7rem}
+.pd{font-size:.875rem;color:var(--t2);line-height:1.7;margin-bottom:20px}
+.pmeta{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:18px}
+.pmi{font-size:.78rem;color:var(--tm);font-family:var(--fb)}
+.plk{display:inline-flex;align-items:center;gap:6px;font-size:.875rem;font-weight:600;color:var(--blue);font-family:var(--fb);transition:gap .2s}
+.pc:hover .plk{gap:10px}
+.coming{border:2px dashed var(--border);background:var(--off);display:flex;align-items:center;justify-content:center;min-height:260px;border-radius:24px;opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.coming.vis{opacity:1;transform:translateY(0)}
+.coming-in{text-align:center;padding:40px}
+.coming-icon{font-size:2.5rem;margin-bottom:14px;display:block}
+.coming-title{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--t2);margin-bottom:8px}
+.coming-desc{font-size:.85rem;color:var(--tm);line-height:1.6}
+.coming-desc a{color:var(--blue);font-weight:600;text-decoration:none}
+.cta-strip{background:var(--navy);padding:72px 48px;text-align:center}
+.cta-title{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:14px}
+.cta-sub{font-size:1rem;color:rgba(255,255,255,.45);margin-bottom:32px}
+.cta-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:100px;font-family:var(--fb);font-size:.95rem;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-b{background:var(--blue);color:#fff}.btn-b:hover{background:var(--bdim);transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,142,247,.4)}
+.btn-o{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)}.btn-o:hover{border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-2px)}
+.ar{transition:transform .2s}.btn:hover .ar{transform:translateX(4px)}
+footer{background:#060A14;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.fb3{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff;letter-spacing:-.02em}.fb3 span{color:var(--blue)}
+.fc{font-size:.78rem;color:rgba(255,255,255,.3);font-family:var(--fb)}
+.fll{display:flex;gap:24px}.fll a{font-size:.78rem;font-weight:500;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}.fll a:hover{color:#fff}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.vis{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.pgrid{grid-template-columns:1fr}.pc.wide{grid-column:span 1;display:block}.pc.wide .pthi{min-height:220px}}
+@media(max-width:768px){nav{padding:0 20px}.nl{display:none}.hbg{display:flex}.phero{padding:120px 20px 60px}.sec{padding:60px 20px}.pc.wide .pi{padding:28px}.cta-strip{padding:56px 20px}.fll{display:none}footer{padding:28px 20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="mnav" id="mnav">
+  <a href="index.html" onclick="cn()">Home</a>
+  <a href="work.html" onclick="cn()">Work</a>
+  <a href="about.html" onclick="cn()">About</a>
+  <a href="experience.html" onclick="cn()">Experience</a>
+  <a href="hire.html" onclick="cn()" style="color:var(--blue)">Hire Me →</a>
+</div>
+<nav>
+  <a href="index.html" class="logo">LS<span>.</span></a>
+  <ul class="nl">
+    <li><a href="work.html" class="act">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="hire.html" class="ncta">Hire Me →</a></li>
+  </ul>
+  <button class="hbg" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<main>
+<section class="phero">
+  <div class="phgrid" aria-hidden="true"></div>
+  <div class="phi">
+    <span class="pey">Selected Work</span>
+    <h1 class="pt">Things I've built<br>and <em>shipped.</em></h1>
+    <p class="ps">Enterprise platforms, mobile games, healthcare apps, and personal projects. Every project here has a real story — click to read it.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="inn">
+    <div class="note rv">
+      <span class="note-icon">🔒</span>
+      <p class="note-text"><strong>Note on confidentiality:</strong> Some screens from Skye Air Mobility are internal products and cannot be shown publicly. Those case studies show my full process — research, flows, wireframes — with actual screens available on request during interviews.</p>
+    </div>
+    <div class="filters rv">
+      <button class="fb2 on" data-f="all">All Work</button>
+      <button class="fb2" data-f="enterprise">Enterprise</button>
+      <button class="fb2" data-f="gaming">Gaming</button>
+      <button class="fb2" data-f="mobile">Mobile App</button>
+      <button class="fb2" data-f="personal">Personal</button>
+    </div>
+    <div class="pgrid">
+      <!-- FMS - Featured -->
+      <a href="case-fms.html" class="pc wide" data-cat="enterprise">
+        <div class="pth"><div class="pthi bg-e"><span style="font-size:5rem;filter:drop-shadow(0 0 40px rgba(79,142,247,.7))">✦</span></div><span class="pb">Enterprise UX</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag">Enterprise</span><span class="ptag">Dashboard</span><span class="ptag">Design System</span><span class="ptag">B2B SaaS</span></div>
+          <div class="pco">Skye Air Mobility · Current Role</div>
+          <div class="ptt">Fleet Management System</div>
+          <div class="pd">End-to-end UX for Skye Air's internal drone fleet operations platform. Complex real-time data, multiple user roles, and dashboards that operations teams depend on every single day.</div>
+          <div class="pmeta"><span class="pmi">👤 Lead UX Designer</span><span class="pmi">📅 Nov 2025 – Present</span><span class="pmi">🔧 Figma, FigJam, Jira</span></div>
+          <span class="plk">Read Full Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- Queen Ludo -->
+      <a href="case-queenludo.html" class="pc" data-cat="gaming">
+        <div class="pth"><div class="pthi bg-g"><span style="filter:drop-shadow(0 0 28px rgba(167,139,250,.9))">🎲</span></div><span class="pb">Game UI</span><span class="plv"><span class="ld"></span>Live</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag ptag-p">Gaming</span><span class="ptag ptag-g">Play Store</span><span class="ptag ptag-p">Android</span></div>
+          <div class="pco">Kickr Technology</div>
+          <div class="ptt">Queen Ludo</div>
+          <div class="pd">Complete game UI design — lobby, gameplay, rewards, onboarding and win/lose screens. One of my first full game design projects, now live on Google Play Store.</div>
+          <div class="pmeta"><span class="pmi">👤 Full Game UI</span><span class="pmi">📱 Android</span><span class="pmi">🔧 Figma</span></div>
+          <span class="plk">Read Full Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- YourGynac -->
+      <a href="case-yourgynac.html" class="pc" data-cat="mobile">
+        <div class="pth"><div class="pthi bg-h"><span style="filter:drop-shadow(0 0 28px rgba(52,211,153,.9))">🩺</span></div><span class="pb">Healthcare · iOS</span><span class="plv"><span class="ld"></span>Live</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag ptag-g">Healthcare</span><span class="ptag ptag-g">iOS</span><span class="ptag ptag-g">App Store</span></div>
+          <div class="pco">Kickr Technology</div>
+          <div class="ptt">YourGynac</div>
+          <div class="pd">UX for a women's healthcare booking app — live on the Apple App Store. Designing for a sensitive domain meant getting every detail, every word, exactly right.</div>
+          <div class="pmeta"><span class="pmi">👤 UI/UX Designer</span><span class="pmi">📱 iOS</span><span class="pmi">🔧 Figma, Photoshop</span></div>
+          <span class="plk">Read Full Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- Operations Portal -->
+      <a href="case-fms.html" class="pc" data-cat="enterprise">
+        <div class="pth"><div class="pthi bg-o"><span style="filter:drop-shadow(0 0 28px rgba(79,142,247,.7))">📊</span></div><span class="pb">Operations UX</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag">Enterprise</span><span class="ptag">Operations</span><span class="ptag">Dashboard</span></div>
+          <div class="pco">Skye Air Mobility</div>
+          <div class="ptt">Operations Portal</div>
+          <div class="pd">Internal portal for managing day-to-day drone operations. Designed for speed — operations teams need to find information instantly under real operational pressure.</div>
+          <div class="pmeta"><span class="pmi">👤 Lead UX Designer</span><span class="pmi">🔧 Figma, Jira</span></div>
+          <span class="plk">View Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- Jelly Match -->
+      <a href="case-queenludo.html" class="pc" data-cat="gaming">
+        <div class="pth"><div class="pthi bg-d"><span style="filter:drop-shadow(0 0 28px rgba(245,158,11,.8))">🍬</span></div><span class="pb">Game UI</span><span class="plv"><span class="ld"></span>Live</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag ptag-p">Gaming</span><span class="ptag ptag-g">Play Store</span><span class="ptag ptag-a">Puzzle</span></div>
+          <div class="pco">Kickr Technology</div>
+          <div class="ptt">Jelly Match</div>
+          <div class="pd">Candy-crush style puzzle game UI — complete visual system, game mechanics UX, level progression, and reward flows. Live on Google Play Store.</div>
+          <div class="pmeta"><span class="pmi">👤 Full Game UI</span><span class="pmi">📱 Android</span></div>
+          <span class="plk">View Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- Worm IO -->
+      <a href="case-queenludo.html" class="pc" data-cat="gaming">
+        <div class="pth"><div class="pthi bg-p"><span style="filter:drop-shadow(0 0 28px rgba(139,92,246,.7))">🐛</span></div><span class="pb">Game UI</span><span class="plv"><span class="ld"></span>Live</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag ptag-p">Gaming</span><span class="ptag ptag-g">Play Store</span><span class="ptag ptag-p">Arcade</span></div>
+          <div class="pco">Kickr Technology</div>
+          <div class="ptt">Worm IO</div>
+          <div class="pd">Multiplayer arcade game UI — interaction design for real-time multiplayer gameplay, leaderboards, and competitive game flows. Live on Google Play Store.</div>
+          <div class="pmeta"><span class="pmi">👤 Full Game UI</span><span class="pmi">📱 Android</span></div>
+          <span class="plk">View Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- Personal Project -->
+      <a href="case-queenludo.html" class="pc" data-cat="personal">
+        <div class="pth"><div class="pthi bg-o"><span style="filter:drop-shadow(0 0 28px rgba(245,158,11,.7))">🟡</span></div><span class="pb">Personal Project</span></div>
+        <div class="pi">
+          <div class="ptags"><span class="ptag ptag-a">Personal</span><span class="ptag ptag-a">Game UI</span><span class="ptag ptag-a">Full Process</span></div>
+          <div class="pco">Self-initiated</div>
+          <div class="ptt">TriMatch — Puzzle Game UI</div>
+          <div class="pd">Personal project designed from scratch — full UX process with personas, user flows, wireframes, and neon high-fidelity UI for a tile-matching mobile game.</div>
+          <div class="pmeta"><span class="pmi">🎯 Full UX Process</span><span class="pmi">🔧 Figma</span></div>
+          <span class="plk">View Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <!-- Coming Soon -->
+      <div class="coming" data-cat="all">
+        <div class="coming-in">
+          <span class="coming-icon">🛠️</span>
+          <div class="coming-title">More case studies coming soon</div>
+          <p class="coming-desc">Adding Dino, Coin Ludo, and UTM Platform soon.<br><br>Want to see more work now? <a href="hire.html">Get in touch →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-strip">
+  <div class="rv">
+    <h2 class="cta-title">See something you like?</h2>
+    <p class="cta-sub">I'm open to new UX roles in Delhi NCR. Let's talk about what you're building.</p>
+    <div class="cta-row">
+      <a href="hire.html" class="btn btn-b">Get In Touch <span class="ar">→</span></a>
+      <a href="about.html" class="btn btn-o">Read My Story <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="fb3">LS<span>.</span> Laxmi Sharma</div>
+  <p class="fc">© 2026 Laxmi Sharma · UX Designer · Delhi NCR</p>
+  <div class="fll"><a href="work.html">Work</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="hire.html">Hire Me</a></div>
+</footer>
+<script>
+const hb=document.getElementById('hb'),mn=document.getElementById('mnav');
+let op=false;
+hb.addEventListener('click',()=>{op=!op;mn.classList.toggle('open',op);hb.setAttribute('aria-expanded',op)});
+function cn(){op=false;mn.classList.remove('open');hb.setAttribute('aria-expanded',false)}
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.pc,.coming').forEach(el=>obs.observe(el));
+const btns=document.querySelectorAll('.fb2');
+const cards=document.querySelectorAll('.pc,.coming');
+btns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btns.forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const f=btn.dataset.f;
+    cards.forEach(c=>{
+      const cat=c.dataset.cat||'all';
+      const show=f==='all'||cat===f||cat==='all';
+      c.style.display=show?'':'none';
+      if(c.classList.contains('wide'))c.style.display=show?'grid':'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

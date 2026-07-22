@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About — Laxmi Sharma | UX Designer</title>
+<meta name="description" content="The story behind Laxmi Sharma — UX Designer based in Delhi NCR with 2.5+ years experience."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0A0F1E;--white:#fff;--off:#F8FAFC;--blue:#4F8EF7;--bdim:#3B7BF0;--bglow:rgba(79,142,247,.14);--amber:#F59E0B;--purple:#8B5CF6;--green:#10B981;--t1:#0A0F1E;--t2:#475569;--tm:#94A3B8;--border:#E2E8F0;--bdark:rgba(255,255,255,.08);--fd:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif;--ease:cubic-bezier(0.22,1,0.36,1)}
+html{scroll-behavior:smooth}body{font-family:var(--fb);color:var(--t1);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,15,30,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bdark)}
+.logo{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em}.logo span{color:var(--blue)}
+.nl{display:flex;align-items:center;gap:32px;list-style:none}.nl a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}.nl a:hover,.nl a.act{color:#fff}
+.ncta{padding:9px 22px;background:var(--blue)!important;color:#fff!important;border-radius:100px;font-weight:600!important;font-size:.85rem!important}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hbg span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.mnav{display:none;position:fixed;inset:0;z-index:99;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;gap:36px}.mnav.open{display:flex}
+.mnav a{font-family:var(--fd);font-size:2rem;font-weight:700;color:#fff;text-decoration:none;opacity:.85}.mnav a:hover{opacity:1;color:var(--blue)}
+.phero{padding:140px 48px 80px;background:var(--navy);position:relative;overflow:hidden}
+.phgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at 30% 50%,black 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 30% 50%,black 0%,transparent 70%)}
+.phi{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.pey{font-size:.72rem;font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:block;font-family:var(--fb)}
+.pt{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+.pt em{font-style:normal;color:var(--blue)}
+.ps{font-size:1.1rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:560px}
+.sec{padding:88px 48px}.inn{max-width:1200px;margin:0 auto}
+.sl{font-size:.72rem;font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;display:block;font-family:var(--fb)}
+.st{font-family:var(--fd);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.03em;color:var(--t1);line-height:1.15;margin-bottom:16px}
+/* STORY */
+.story-sec{background:var(--off)}
+.story-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+.story-left{position:sticky;top:100px}
+.hl{background:var(--white);border-left:3px solid var(--blue);border-radius:0 14px 14px 0;padding:20px 24px;margin-top:28px}
+.hl p{font-size:.95rem;color:var(--t2);line-height:1.75;font-style:italic}
+.hl strong{color:var(--blue);font-style:normal}
+.chapter{margin-bottom:44px}
+.ch-num{font-family:var(--fd);font-size:4rem;font-weight:800;color:var(--border);letter-spacing:-.05em;line-height:1;margin-bottom:-8px}
+.ch-title{font-family:var(--fd);font-size:1.4rem;font-weight:800;color:var(--t1);letter-spacing:-.02em;margin-bottom:12px}
+.ch-text{font-size:.98rem;color:var(--t2);line-height:1.85;margin-bottom:12px}
+.ch-text strong{color:var(--t1);font-weight:600}
+/* TIMELINE */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--blue),var(--purple),var(--amber));border-radius:2px}
+.titem{position:relative;margin-bottom:40px;opacity:0;transform:translateX(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.titem.vis{opacity:1;transform:translateX(0)}
+.titem:last-child{margin-bottom:0}
+.tdot{position:absolute;left:-39px;top:6px;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--blue);background:var(--blue);transition:transform .2s}
+.titem:nth-child(2) .tdot{box-shadow:0 0 0 2px var(--purple);background:var(--purple)}
+.titem:nth-child(3) .tdot{box-shadow:0 0 0 2px var(--green);background:var(--green)}
+.titem:nth-child(4) .tdot{box-shadow:0 0 0 2px var(--amber);background:var(--amber)}
+.titem:nth-child(5) .tdot{box-shadow:0 0 0 2px var(--blue);background:var(--blue)}
+.titem:hover .tdot{transform:scale(1.3)}
+.tyear{font-size:.7rem;font-weight:700;color:var(--tm);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;font-family:var(--fb)}
+.tcard{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.tcard:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.07);border-color:rgba(79,142,247,.25)}
+.tcard-emoji{font-size:1.3rem;margin-bottom:10px;display:block}
+.tcard-title{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--t1);margin-bottom:7px}
+.tcard-text{font-size:.85rem;color:var(--t2);line-height:1.65}
+/* PHILOSOPHY */
+.phil-sec{background:var(--navy)}
+.phil-sec .sl{color:var(--amber)}
+.phil-sec .st{color:#fff}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;background:var(--bdark);border-radius:24px;overflow:hidden}
+.pr{padding:44px 32px;background:rgba(255,255,255,.03);transition:background .3s}
+.pr:hover{background:rgba(79,142,247,.07)}
+.pr-num{font-family:var(--fd);font-size:3.5rem;font-weight:800;color:rgba(255,255,255,.05);letter-spacing:-.05em;line-height:1;margin-bottom:-4px}
+.pr-title{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:12px}
+.pr-text{font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.75}
+.pr-acc{color:var(--blue)}
+/* VALUES */
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.vc{padding:28px 22px;background:#fff;border:1px solid var(--border);border-radius:20px;text-align:center;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.vc:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(79,142,247,.08);border-color:rgba(79,142,247,.3)}
+.vc-icon{font-size:1.8rem;margin-bottom:12px;display:block}
+.vc-name{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--t1);margin-bottom:8px}
+.vc-desc{font-size:.82rem;color:var(--t2);line-height:1.6}
+/* MBA & GOALS */
+.mba-sec{background:linear-gradient(135deg,#EFF6FF,#E0F2FE)}
+.mba-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.mba-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:36px;position:relative;overflow:hidden}
+.mba-card::before{content:'MBA';position:absolute;right:-10px;top:-20px;font-family:var(--fd);font-size:7rem;font-weight:800;color:rgba(79,142,247,.04);line-height:1;pointer-events:none}
+.mba-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;background:#EFF6FF;border:1px solid rgba(79,142,247,.3);border-radius:100px;margin-bottom:18px}
+.mba-badge span{font-size:.75rem;font-weight:600;color:var(--blue);font-family:var(--fb)}
+.mba-title{font-family:var(--fd);font-size:1.3rem;font-weight:800;color:var(--t1);margin-bottom:10px;letter-spacing:-.02em}
+.mba-text{font-size:.9rem;color:var(--t2);line-height:1.75;margin-bottom:18px}
+.mba-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.mba-label{font-size:.78rem;font-weight:600;color:var(--tm);min-width:90px;font-family:var(--fb)}
+.mba-val{font-size:.875rem;color:var(--t1);font-weight:500}
+.goals{display:flex;flex-direction:column;gap:16px}
+.goal{display:flex;gap:14px;align-items:flex-start;padding:18px;background:#fff;border:1px solid var(--border);border-radius:16px;transition:transform .3s var(--ease),border-color .3s}
+.goal:hover{transform:translateX(6px);border-color:var(--blue)}
+.goal-icon{font-size:1.3rem;flex-shrink:0;padding-top:2px}
+.goal-title{font-family:var(--fd);font-size:.92rem;font-weight:700;color:var(--t1);margin-bottom:4px}
+.goal-desc{font-size:.82rem;color:var(--t2);line-height:1.6}
+/* SKILLS */
+.sk-sec{background:var(--navy)}
+.sk-sec .sl{color:var(--amber)}
+.sk-sec .st{color:#fff}
+.skgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.skc{padding:26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.skc:hover{background:rgba(79,142,247,.08);border-color:rgba(79,142,247,.25);transform:translateY(-4px)}
+.ski{font-size:1.6rem;margin-bottom:12px;display:block}
+.skn{font-family:var(--fd);font-size:.9rem;font-weight:700;color:#fff;margin-bottom:10px}
+.skps{display:flex;flex-wrap:wrap;gap:6px}
+.skp{padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);font-size:.68rem;font-weight:500;font-family:var(--fb)}
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.cert-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:transform .3s var(--ease),border-color .3s}
+.cert-card:hover{transform:translateY(-3px);border-color:rgba(79,142,247,.3)}
+.cert-icon{font-size:1.6rem;flex-shrink:0}
+.cert-name{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--t1);margin-bottom:4px}
+.cert-by{font-size:.82rem;color:var(--tm);font-family:var(--fb)}
+/* CTA */
+.about-cta{background:var(--navy);padding:80px 48px;text-align:center}
+.act{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:14px}
+.acs{font-size:1rem;color:rgba(255,255,255,.45);margin-bottom:32px}
+.cta-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:100px;font-family:var(--fb);font-size:.95rem;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-b{background:var(--blue);color:#fff}.btn-b:hover{background:var(--bdim);transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,142,247,.4)}
+.btn-o{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)}.btn-o:hover{border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-2px)}
+.ar{transition:transform .2s}.btn:hover .ar{transform:translateX(4px)}
+footer{background:#060A14;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.fb{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff;letter-spacing:-.02em}.fb span{color:var(--blue)}
+.fc{font-size:.78rem;color:rgba(255,255,255,.3);font-family:var(--fb)}
+.fll{display:flex;gap:24px}.fll a{font-size:.78rem;font-weight:500;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}.fll a:hover{color:#fff}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@media(max-width:1024px){.story-grid{grid-template-columns:1fr;gap:48px}.story-left{position:static}.principles{grid-template-columns:1fr}.mba-grid{grid-template-columns:1fr;gap:36px}.vgrid{grid-template-columns:repeat(2,1fr)}.skgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:0 20px}.nl{display:none}.hbg{display:flex}.phero{padding:120px 20px 60px}.sec{padding:60px 20px}.vgrid{grid-template-columns:1fr 1fr}.skgrid{grid-template-columns:1fr}.cert-grid{grid-template-columns:1fr}.about-cta{padding:60px 20px}.fll{display:none}footer{padding:28px 20px}}
+@media(max-width:480px){.vgrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="mnav" id="mnav">
+  <a href="index.html" onclick="cn()">Home</a>
+  <a href="work.html" onclick="cn()">Work</a>
+  <a href="about.html" onclick="cn()">About</a>
+  <a href="experience.html" onclick="cn()">Experience</a>
+  <a href="hire.html" onclick="cn()" style="color:var(--blue)">Hire Me →</a>
+</div>
+<nav>
+  <a href="index.html" class="logo">LS<span>.</span></a>
+  <ul class="nl">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="about.html" class="act">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="hire.html" class="ncta">Hire Me →</a></li>
+  </ul>
+  <button class="hbg" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<main>
+<section class="phero">
+  <div class="phgrid" aria-hidden="true"></div>
+  <div class="phi">
+    <span class="pey">About Me</span>
+    <h1 class="pt">The designer who<br>thinks like a <em>founder.</em></h1>
+    <p class="ps">22. Delhi. Commerce student turned UX Designer — enterprise drone platforms, mobile games, healthcare apps. Here's the real story.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="sec story-sec">
+  <div class="inn">
+    <div class="story-grid">
+      <div class="story-left rv">
+        <span class="sl">My Story</span>
+        <h2 class="st">How I got here.</h2>
+        <p style="font-size:1rem;color:var(--t2);line-height:1.75">Not the typical UX path — and that's exactly what makes it interesting.</p>
+        <div class="hl"><p><strong>"I didn't plan to be a UX designer.</strong> I chose BCA thinking it was a practical shortcut. Three years later I discovered something that finally made sense — designing things that solve real problems for real people."</p></div>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="font-size:1.2rem">🎓</span><div><div style="font-size:.82rem;font-weight:600;color:var(--t1)">BCA — Institute of Technology & Science</div><div style="font-size:.78rem;color:var(--tm)">2021 – 2024</div></div></div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="font-size:1.2rem">📚</span><div><div style="font-size:.82rem;font-weight:600;color:var(--t1)">MBA — Marketing & Product Strategy</div><div style="font-size:.78rem;color:var(--tm)">Sikkim Manipal University · Expected 2027</div></div></div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="font-size:1.2rem">🏅</span><div><div style="font-size:.82rem;font-weight:600;color:var(--t1)">Advanced UI/UX Design Specialization</div><div style="font-size:.78rem;color:var(--tm)">Ducat Ghaziabad</div></div></div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="font-size:1.2rem">🏅</span><div><div style="font-size:.82rem;font-weight:600;color:var(--t1)">Google UX Design Professional Certificate</div><div style="font-size:.78rem;color:var(--tm)">Coursera</div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="chapter rv">
+          <div class="ch-num">01</div>
+          <div class="ch-title">The Unexpected Beginning</div>
+          <p class="ch-text">I grew up in Uttar Pradesh and moved to Delhi as a child. Commerce in Class 12, then BCA — I chose it thinking it was a fast path to employment. Three years later, final semester, I needed a direction fast.</p>
+          <p class="ch-text">A UI/UX course changed everything. Within the first week, <strong>something clicked that had never clicked before</strong> — the idea that you could sit at a computer and design something that helps a real person do their job better.</p>
+        </div>
+        <div class="chapter rv">
+          <div class="ch-num">02</div>
+          <div class="ch-title">Learning by Shipping</div>
+          <p class="ch-text">My first UX role at <strong>Kickr Technology</strong> put me straight into game design. No long onboarding — I was designing interfaces for mobile games that thousands of users would download within weeks.</p>
+          <p class="ch-text">I shipped 20+ products. Each one taught me something different — about how people tap, what makes them stay, what makes them close an app forever. <strong>Real users are the best teachers.</strong></p>
+        </div>
+        <div class="chapter rv">
+          <div class="ch-num">03</div>
+          <div class="ch-title">Enterprise & The Bigger Picture</div>
+          <p class="ch-text">I joined <strong>Skye Air Mobility</strong> — a drone logistics startup — and the world got bigger. Suddenly I wasn't designing for entertainment. I was designing for operations teams making real decisions about real drone fleets.</p>
+          <p class="ch-text">This is where I fell in love with <strong>UX strategy and product thinking</strong> — understanding not just how a screen looks, but why a workflow exists and how to make it genuinely faster and less painful.</p>
+        </div>
+        <div class="chapter rv">
+          <div class="ch-num">04</div>
+          <div class="ch-title">The Road Ahead</div>
+          <p class="ch-text">I'm 22. I'm pursuing an <strong>MBA in Marketing & Product Strategy</strong> alongside my full-time role. My goal isn't just to be a great designer — it's to grow into Product Management and eventually teach what I've learned.</p>
+          <p class="ch-text">I want to be in a lecture hall one day, telling students that the best designers aren't the ones with the most tools — they're the ones who ask the best questions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="sec">
+  <div class="inn">
+    <div class="rv" style="margin-bottom:52px"><span class="sl">Timeline</span><h2 class="st">The journey, chapter by chapter.</h2></div>
+    <div class="timeline">
+      <div class="titem"><span class="tdot"></span><div class="tyear">2021</div><div class="tcard"><span class="tcard-emoji">🎓</span><div class="tcard-title">Started BCA — Institute of Technology & Science</div><p class="tcard-text">Chose Computer Applications hoping for a fast path to work. Spent three years discovering that coding wasn't it — but something else was waiting.</p></div></div>
+      <div class="titem"><span class="tdot"></span><div class="tyear">2023</div><div class="tcard"><span class="tcard-emoji">✨</span><div class="tcard-title">Discovered UI/UX — Advanced Design Specialization, Ducat Ghaziabad</div><p class="tcard-text">Final semester decision. Took a UI/UX certification and immediately knew this was the intersection of technology, psychology, and creativity I'd been missing.</p></div></div>
+      <div class="titem"><span class="tdot"></span><div class="tyear">Mar 2024</div><div class="tcard"><span class="tcard-emoji">🎨</span><div class="tcard-title">First Role — Graphic Designer, Xomach Infotech</div><p class="tcard-text">Built visual design foundations — branding, creatives, social media. Partnered with marketing teams and increased click-through rates by 82% across digital channels.</p></div></div>
+      <div class="titem"><span class="tdot"></span><div class="tyear">Aug 2024</div><div class="tcard"><span class="tcard-emoji">🎮</span><div class="tcard-title">UI/UX Designer at Kickr Technology — 20+ Products Shipped</div><p class="tcard-text">Designed and shipped 20+ mobile games and apps to Play Store and App Store — Queen Ludo, Dino, Worm IO, YourGynac, and more. This is where I became a real designer.</p></div></div>
+      <div class="titem"><span class="tdot"></span><div class="tyear">2025</div><div class="tcard"><span class="tcard-emoji">🚁</span><div class="tcard-title">UX Designer at Skye Air Mobility + MBA begins</div><p class="tcard-text">Joined a drone logistics startup designing enterprise platforms. Simultaneously enrolled in MBA (Marketing & Product Strategy) — building the bridge toward Product Management.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="sec phil-sec">
+  <div class="inn">
+    <div class="rv"><span class="sl">How I Think</span><h2 class="st">Design philosophy.</h2></div>
+    <div class="principles">
+      <div class="pr rv"><div class="pr-num">01</div><div class="pr-title">Research before rectangles.</div><p class="pr-text">I never open Figma before understanding the person I'm designing for. The best UI always comes from deep understanding of the problem — not from looking at other apps for inspiration.</p></div>
+      <div class="pr rv"><div class="pr-num">02</div><div class="pr-title">Simple is the hardest thing to build.</div><p class="pr-text">Anyone can add complexity. Removing it takes real thinking. I push every design toward the minimum steps, words, and decisions a user has to make.</p></div>
+      <div class="pr rv"><div class="pr-num">03</div><div class="pr-title">Design is a conversation, not a deliverable.</div><p class="pr-text">The best work happens when designers, developers, and PMs speak the same language. I don't hand off designs — I <span class="pr-acc">build them together</span> with the people who ship them.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="sec">
+  <div class="inn">
+    <div class="rv" style="margin-bottom:8px"><span class="sl">Core Values</span><h2 class="st">What I stand for.</h2></div>
+    <div class="vgrid">
+      <div class="vc rv d1"><span class="vc-icon">🔍</span><div class="vc-name">Curiosity</div><p class="vc-desc">I ask "why" more than "how". Understanding the root of a problem always produces better design than jumping to solutions.</p></div>
+      <div class="vc rv d2"><span class="vc-icon">🤝</span><div class="vc-name">Collaboration</div><p class="vc-desc">Design doesn't happen in isolation. The best products come from designers who listen as much as they create.</p></div>
+      <div class="vc rv d3"><span class="vc-icon">🌱</span><div class="vc-name">Growth</div><p class="vc-desc">Always learning — MBA, AI tools, new domains. Stagnation is the only real career risk in this field.</p></div>
+      <div class="vc rv d4"><span class="vc-icon">🎯</span><div class="vc-name">Intent</div><p class="vc-desc">Every design decision should have a reason. I don't add elements because they look nice — I add them because they solve something real.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec sk-sec">
+  <div class="inn">
+    <div class="rv"><span class="sl">Core Skills</span><h2 class="st">What I bring to the table.</h2></div>
+    <div class="skgrid">
+      <div class="skc rv d1"><span class="ski">🎨</span><div class="skn">UX & Product Design</div><div class="skps"><span class="skp">Wireframing</span><span class="skp">High-Fidelity Prototyping</span><span class="skp">Design Systems</span><span class="skp">User Flows</span><span class="skp">Information Architecture</span></div></div>
+      <div class="skc rv d2"><span class="ski">🔬</span><div class="skn">User Research & Strategy</div><div class="skps"><span class="skp">Usability Testing</span><span class="skp">User Journey Mapping</span><span class="skp">Personas</span><span class="skp">A/B Testing</span><span class="skp">Interaction Design</span></div></div>
+      <div class="skc rv d3"><span class="ski">🛠️</span><div class="skn">Tools & Technologies</div><div class="skps"><span class="skp">Figma</span><span class="skp">FigJam</span><span class="skp">Adobe Photoshop</span><span class="skp">Adobe Illustrator</span><span class="skp">Jira</span><span class="skp">Trello</span><span class="skp">Agile/Scrum</span></div></div>
+      <div class="skc rv d1"><span class="ski">🤖</span><div class="skn">AI-Assisted Design</div><div class="skps"><span class="skp">Midjourney</span><span class="skp">Adobe Firefly</span><span class="skp">Uizard</span><span class="skp">ChatGPT</span><span class="skp">Gamma</span><span class="skp">Canva AI</span></div></div>
+      <div class="skc rv d2"><span class="ski">🏢</span><div class="skn">Domain Expertise</div><div class="skps"><span class="skp">B2B SaaS</span><span class="skp">Logistics Dashboards</span><span class="skp">iOS/Android Apps</span><span class="skp">Mobile Gaming</span><span class="skp">Enterprise UX</span></div></div>
+      <div class="skc rv d3"><span class="ski">🤝</span><div class="skn">Collaboration</div><div class="skps"><span class="skp">Cross-functional Teams</span><span class="skp">Dev Handoff</span><span class="skp">Product Thinking</span><span class="skp">Stakeholder Comms</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MBA & GOALS -->
+<section class="sec mba-sec">
+  <div class="inn">
+    <div class="mba-grid">
+      <div class="rv">
+        <span class="sl">Education & Growth</span>
+        <h2 class="st">Building the bridge to Product Management.</h2>
+        <p style="font-size:1rem;color:var(--t2);line-height:1.75;margin-bottom:32px">Design gave me the user lens. The MBA is giving me the business lens. Together, they're the foundation for a PM career — and eventually, academia.</p>
+        <div class="mba-card">
+          <div class="mba-badge"><span>📚 Currently Pursuing</span></div>
+          <div class="mba-title">MBA — Marketing & Product Strategy</div>
+          <p class="mba-text">Studying alongside my full-time role at Skye Air Mobility. Focusing on product strategy, go-to-market thinking, and business fundamentals to complement my design background.</p>
+          <div class="mba-row"><span class="mba-label">University</span><span class="mba-val">Sikkim Manipal University</span></div>
+          <div class="mba-row"><span class="mba-label">Specialisation</span><span class="mba-val">Marketing & Product Strategy</span></div>
+          <div class="mba-row"><span class="mba-label">Expected</span><span class="mba-val">2027</span></div>
+          <div class="mba-row"><span class="mba-label">Mode</span><span class="mba-val">Online · while working full-time</span></div>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
+            <div style="font-size:.75rem;font-weight:600;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;font-family:var(--fb)">Certifications</div>
+            <div style="font-size:.875rem;color:var(--t2);margin-bottom:6px">🏅 Advanced UI/UX Design Specialization — Ducat Ghaziabad</div>
+            <div style="font-size:.875rem;color:var(--t2)">🏅 Google UX Design Professional Certificate — Coursera</div>
+          </div>
+        </div>
+      </div>
+      <div class="rv d1">
+        <span class="sl" style="display:block;margin-bottom:12px">Career Goals</span>
+        <h3 style="font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--t1);letter-spacing:-.02em;margin-bottom:28px">Where I'm heading.</h3>
+        <div class="goals">
+          <div class="goal"><span class="goal-icon">🎨</span><div><div class="goal-title">Senior UX Designer (Next 1–2 Years)</div><p class="goal-desc">Deepen UX expertise at a product company in Delhi NCR. Own complex design systems, lead research, collaborate closely with PMs to understand the full product cycle.</p></div></div>
+          <div class="goal"><span class="goal-icon">📊</span><div><div class="goal-title">Associate Product Manager (2027–2028)</div><p class="goal-desc">Transition into PM using design experience + MBA foundation. Start with an APM role where design thinking is valued at the PM level.</p></div></div>
+          <div class="goal"><span class="goal-icon">🎓</span><div><div class="goal-title">PhD & Academia (Long-term)</div><p class="goal-desc">Pursue a PhD in Product Design or Management. Teach — bring real industry experience into the classroom and help the next generation think bigger.</p></div></div>
+          <div class="goal"><span class="goal-icon">🎤</span><div><div class="goal-title">Speaker & Mentor</div><p class="goal-desc">Share learnings at design conferences. Mentor early-career designers, especially those from non-traditional backgrounds who feel like they don't belong.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <div class="rv">
+    <h2 class="act">Enough about me — let's talk about your product.</h2>
+    <p class="acs">Open to UX Designer and Product Designer roles in Delhi NCR.</p>
+    <div class="cta-row">
+      <a href="hire.html" class="btn btn-b">Get In Touch <span class="ar">→</span></a>
+      <a href="work.html" class="btn btn-o">See My Work <span class="ar">→</span></a>
+      <a href="Laxmi_new_Resume__1_.pdf" download class="btn btn-o" style="border-color:rgba(245,158,11,.4);color:var(--amber)">Download Resume <span class="ar">↓</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="fb">LS<span>.</span> Laxmi Sharma</div>
+  <p class="fc">© 2026 Laxmi Sharma · UX Designer · Delhi NCR</p>
+  <div class="fll"><a href="work.html">Work</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="hire.html">Hire Me</a></div>
+</footer>
+<script>
+const hb=document.getElementById('hb'),mn=document.getElementById('mnav');
+let op=false;
+hb.addEventListener('click',()=>{op=!op;mn.classList.toggle('open',op);hb.setAttribute('aria-expanded',op)});
+function cn(){op=false;mn.classList.remove('open');hb.setAttribute('aria-expanded',false)}
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.titem').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

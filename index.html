@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Laxmi — UX Designer | Delhi NCR</title>
+<meta name="description" content="UX Designer with 2.5+ years experience in enterprise platforms, gaming, mobile apps. Based in Delhi NCR."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0A0F1E;--white:#fff;--off:#F8FAFC;
+  --blue:#4F8EF7;--bdim:#3B7BF0;--bglow:rgba(79,142,247,0.14);
+  --amber:#F59E0B;--purple:#8B5CF6;--green:#10B981;
+  --t1:#0A0F1E;--t2:#475569;--tm:#94A3B8;
+  --border:#E2E8F0;--bdark:rgba(255,255,255,0.08);
+  --fd:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+html{scroll-behavior:smooth}body{font-family:var(--fb);color:var(--t1);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+#loader{position:fixed;inset:0;z-index:9999;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity .6s var(--ease),visibility .6s}
+#loader.gone{opacity:0;visibility:hidden}
+.li{display:flex;flex-direction:column;align-items:center;gap:18px}
+.ln{font-family:var(--fd);font-size:2rem;font-weight:800;color:#fff;opacity:0;animation:fi .5s var(--ease) .2s forwards}
+.lb{width:160px;height:2px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
+.lp{height:100%;width:0;background:var(--blue);border-radius:2px;animation:lbar 1s var(--ease) .3s forwards}
+@keyframes fi{to{opacity:1}}@keyframes lbar{to{width:100%}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.s{background:rgba(10,15,30,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:var(--bdark)}
+.logo{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--blue)}
+.nl{display:flex;align-items:center;gap:32px;list-style:none}
+.nl a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.nl a:hover{color:#fff}
+.ncta{padding:9px 22px;background:var(--blue)!important;color:#fff!important;border-radius:100px;font-weight:600!important;font-size:.85rem!important;transition:background .2s,transform .15s!important}
+.ncta:hover{background:var(--bdim)!important;transform:scale(1.03)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hbg span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.mnav{display:none;position:fixed;inset:0;z-index:99;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;gap:36px}
+.mnav.open{display:flex}
+.mnav a{font-family:var(--fd);font-size:2rem;font-weight:700;color:#fff;text-decoration:none;opacity:.85;transition:opacity .2s,color .2s}
+.mnav a:hover{opacity:1;color:var(--blue)}
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:120px 48px 80px;position:relative;overflow:hidden}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center,black 0%,transparent 70%)}
+.hglow{position:absolute;width:600px;height:600px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(79,142,247,.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .12s linear}
+.hi{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2}
+.hbadge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:100px;margin-bottom:32px;opacity:0;animation:sup .6s var(--ease) 1.4s forwards}
+.bdot{width:7px;height:7px;border-radius:50%;background:var(--amber);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hbadge span{font-size:.8rem;font-weight:600;color:var(--amber);font-family:var(--fb)}
+.hh{font-family:var(--fd);font-size:clamp(3rem,6.5vw,5.5rem);line-height:1.05;letter-spacing:-.03em;color:#fff;margin-bottom:24px}
+.l1{opacity:0;animation:sup .7s var(--ease) 1.6s forwards}
+.l2{opacity:0;animation:sup .7s var(--ease) 1.75s forwards}
+.l3{opacity:0;animation:sup .7s var(--ease) 1.9s forwards}
+.thin{font-weight:300;color:rgba(255,255,255,.45)}
+.acc{color:var(--blue)}
+.hsub{font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(255,255,255,.5);line-height:1.75;max-width:580px;margin-bottom:44px;opacity:0;animation:sup .7s var(--ease) 2.05s forwards}
+.hact{display:flex;align-items:center;gap:16px;flex-wrap:wrap;opacity:0;animation:sup .7s var(--ease) 2.2s forwards}
+@keyframes sup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hscroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fi 1s ease 2.8s forwards;color:rgba(255,255,255,.3);font-size:.72rem;font-family:var(--fb);letter-spacing:.08em;text-transform:uppercase}
+.sline{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent);animation:sc 2s ease-in-out infinite}
+@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(1);transform-origin:bottom;opacity:0}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;font-family:var(--fb);font-size:.95rem;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-b{background:var(--blue);color:#fff}.btn-b:hover{background:var(--bdim);transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,142,247,.4)}
+.btn-o{background:transparent;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.2)}.btn-o:hover{border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-2px)}
+.btn-d{background:var(--t1);color:#fff}.btn-d:hover{background:#1E293B;transform:translateY(-2px)}
+.btn-w{background:#fff;color:var(--t1)}.btn-w:hover{background:var(--off);transform:translateY(-2px)}
+.ar{transition:transform .2s}.btn:hover .ar{transform:translateX(4px)}
+.ticker{background:var(--amber);padding:12px 0;overflow:hidden}
+.tt{display:flex;white-space:nowrap;animation:tick 26s linear infinite}
+.ti{display:inline-flex;align-items:center;gap:14px;padding:0 28px;font-family:var(--fd);font-size:.8rem;font-weight:700;color:var(--navy);letter-spacing:.05em;text-transform:uppercase}
+.tdot{width:5px;height:5px;border-radius:50%;background:var(--navy);opacity:.35;flex-shrink:0}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sec{padding:96px 48px}
+.inn{max-width:1200px;margin:0 auto}
+.sl{font-size:.72rem;font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;display:block;font-family:var(--fb)}
+.st{font-family:var(--fd);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.03em;color:var(--t1);line-height:1.15;margin-bottom:16px}
+.ss{font-size:1.05rem;color:var(--t2);line-height:1.7;max-width:540px}
+.about-sec{background:var(--off)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.atext p{font-size:1rem;color:var(--t2);line-height:1.85;margin-bottom:16px}
+.atext p strong{color:var(--t1);font-weight:600}
+.astats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.astat{padding:24px 16px;background:#fff;border:1px solid var(--border);border-radius:16px;text-align:center;transition:transform .3s var(--ease),box-shadow .3s}
+.astat:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.07)}
+.asn{font-family:var(--fd);font-size:2rem;font-weight:800;color:var(--t1);letter-spacing:-.04em;line-height:1;margin-bottom:6px}
+.asn em{font-style:normal;color:var(--blue)}
+.asl{font-size:.78rem;color:var(--tm);font-weight:500}
+.acards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ac{padding:24px;background:#fff;border:1px solid var(--border);border-radius:20px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.ac:hover{transform:translateY(-4px);border-color:rgba(79,142,247,.3);box-shadow:0 16px 40px rgba(79,142,247,.08)}
+.ac:first-child{grid-column:span 2}
+.aci{width:42px;height:42px;border-radius:12px;background:var(--bglow);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.act{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--t1);margin-bottom:8px}
+.acd{font-size:.85rem;color:var(--t2);line-height:1.6}
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.wc{border-radius:24px;overflow:hidden;border:1px solid var(--border);background:#fff;text-decoration:none;color:inherit;display:block;transition:transform .4s var(--ease),box-shadow .4s}
+.wc:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,.1)}
+.wc.wide{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.wth{overflow:hidden;position:relative}
+.wthi{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;transition:transform .5s var(--ease)}
+.wc.wide .wth{height:100%}
+.wc.wide .wthi{aspect-ratio:auto;min-height:280px;height:100%}
+.wc:hover .wthi{transform:scale(1.04)}
+.bg-e{background:linear-gradient(135deg,#0A0F1E,#1E2A3A,#162040)}
+.bg-g{background:linear-gradient(135deg,#1a0533,#2D1B69,#4c1d95)}
+.bg-h{background:linear-gradient(135deg,#052e16,#064e3b,#065f46)}
+.bg-p{background:linear-gradient(135deg,#1c1917,#292524,#1c2a35)}
+.bg-o{background:linear-gradient(135deg,#0c1445,#1e3a5f,#1a4a6b)}
+.wb{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);padding:4px 12px;border-radius:100px;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.06em;text-transform:uppercase;font-family:var(--fb)}
+.wlv{position:absolute;top:14px;right:14px;background:var(--green);padding:3px 10px;border-radius:100px;font-size:.65rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:5px;font-family:var(--fb)}
+.ld{width:5px;height:5px;border-radius:50%;background:#fff;animation:pulse 2s ease-in-out infinite}
+.wi{padding:28px}
+.wc.wide .wi{padding:44px 40px}
+.wtags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.wtag{padding:3px 11px;border-radius:100px;background:#EFF6FF;color:var(--blue);font-size:.7rem;font-weight:600;font-family:var(--fb)}
+.wtag-p{background:#F5F3FF;color:var(--purple)}
+.wtag-g{background:#ECFDF5;color:#059669}
+.wco{font-size:.75rem;font-weight:600;color:var(--tm);margin-bottom:8px;font-family:var(--fb);letter-spacing:.04em;text-transform:uppercase}
+.wt{font-family:var(--fd);font-size:1.2rem;font-weight:800;color:var(--t1);margin-bottom:10px;line-height:1.25;letter-spacing:-.02em}
+.wc.wide .wt{font-size:1.7rem}
+.wd{font-size:.875rem;color:var(--t2);line-height:1.7;margin-bottom:20px}
+.wlk{display:inline-flex;align-items:center;gap:6px;font-size:.875rem;font-weight:600;color:var(--blue);font-family:var(--fb);transition:gap .2s}
+.wc:hover .wlk{gap:10px}
+.sk-sec{background:var(--navy)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.skc{padding:28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.skc:hover{background:rgba(79,142,247,.08);border-color:rgba(79,142,247,.25);transform:translateY(-4px)}
+.ski{font-size:1.8rem;margin-bottom:14px;display:block}
+.skn{font-family:var(--fd);font-size:.95rem;font-weight:700;color:#fff;margin-bottom:10px}
+.skps{display:flex;flex-wrap:wrap;gap:6px}
+.skp{padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);font-size:.7rem;font-weight:500;font-family:var(--fb)}
+.el{display:flex;flex-direction:column}
+.er{display:grid;grid-template-columns:180px 1fr;gap:40px;padding:36px 0;border-bottom:1px solid var(--border)}
+.er:last-child{border-bottom:none}
+.ep{font-size:.82rem;color:var(--tm);padding-top:4px;font-family:var(--fb);font-weight:500}
+.etit{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--t1);margin-bottom:4px}
+.eco{font-size:.9rem;color:var(--blue);font-weight:600;margin-bottom:10px;font-family:var(--fb)}
+.ed{font-size:.875rem;color:var(--t2);line-height:1.75;margin-bottom:14px}
+.ecs{display:flex;flex-wrap:wrap;gap:7px}
+.ec{padding:3px 11px;background:var(--off);border:1px solid var(--border);border-radius:100px;font-size:.7rem;font-weight:500;color:var(--t2);font-family:var(--fb)}
+.cbadge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:100px;font-size:.68rem;font-weight:700;color:#059669;font-family:var(--fb);margin-left:10px}
+.ctasec{background:var(--navy);text-align:center;padding:100px 48px}
+.ctasec .sl{color:var(--amber);display:block;text-align:center}
+.ctasec .st{color:#fff;max-width:700px;margin:0 auto 16px}
+.ctasec .ss{color:rgba(255,255,255,.45);text-align:center;margin:0 auto 40px}
+.cemail{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--blue);text-decoration:none;display:block;margin-bottom:32px;transition:opacity .2s}
+.cemail:hover{opacity:.7}
+.crow{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+footer{background:#060A14;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.fb{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+.fb span{color:var(--blue)}
+.fc{font-size:.78rem;color:rgba(255,255,255,.3);font-family:var(--fb)}
+.fl{display:flex;gap:24px}
+.fl a{font-size:.78rem;font-weight:500;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.fl a:hover{color:#fff}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@media(max-width:1024px){.ag{grid-template-columns:1fr;gap:48px}.sg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:0 20px}.nl{display:none}.hbg{display:flex}.hero{padding:100px 20px 80px}.sec{padding:64px 20px}.wgrid{grid-template-columns:1fr}.wc.wide{grid-column:span 1;display:block}.acards{grid-template-columns:1fr}.ac:first-child{grid-column:span 1}.sg{grid-template-columns:1fr}.er{grid-template-columns:1fr;gap:8px}.ctasec{padding:72px 20px}.fl{display:none}footer{padding:28px 20px}}
+@media(max-width:480px){.hact{flex-direction:column;align-items:flex-start}.astats{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="loader"><div class="li"><div class="ln">Laxmi Sharma</div><div class="lb"><div class="lp"></div></div></div></div>
+<div class="mnav" id="mnav">
+  <a href="index.html" onclick="cn()">Home</a>
+  <a href="work.html" onclick="cn()">Work</a>
+  <a href="about.html" onclick="cn()">About</a>
+  <a href="experience.html" onclick="cn()">Experience</a>
+  <a href="hire.html" onclick="cn()" style="color:var(--blue)">Hire Me →</a>
+</div>
+<nav id="nb">
+  <a href="index.html" class="logo">LS<span>.</span></a>
+  <ul class="nl">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="hire.html" class="ncta">Hire Me →</a></li>
+  </ul>
+  <button class="hbg" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<main>
+<section class="hero">
+  <div class="hgrid" aria-hidden="true"></div>
+  <div class="hglow" id="gl" aria-hidden="true"></div>
+  <div class="hi">
+    <div class="hbadge"><span class="bdot"></span><span>Open to new opportunities · Delhi NCR</span></div>
+    <h1 class="hh">
+      <div class="l1">Hi, I'm <span class="acc">Laxmi.</span></div>
+      <div class="l2"><span class="thin">I design interfaces</span></div>
+      <div class="l3">that don't need a tutorial.</div>
+    </h1>
+    <p class="hsub">UX Designer with 2.5+ years turning complex workflows into products people actually enjoy using — enterprise logistics platforms, mobile games, healthcare apps, and dashboards that make operations teams faster.</p>
+    <div class="hact">
+      <a href="work.html" class="btn btn-b">View My Work <span class="ar">→</span></a>
+      <a href="hire.html" class="btn btn-o">Hire Me <span class="ar">→</span></a>
+      <a href="Laxmi_new_Resume__1_.pdf" download class="btn btn-o" style="border-color:rgba(245,158,11,.4);color:var(--amber)">Download Resume <span class="ar">↓</span></a>
+    </div>
+  </div>
+  <div class="hscroll" aria-hidden="true"><div class="sline"></div>scroll</div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="tt">
+    <div class="ti">2.5+ Years Experience<span class="tdot"></span></div>
+    <div class="ti">20+ Products Shipped<span class="tdot"></span></div>
+    <div class="ti">5 Live Apps<span class="tdot"></span></div>
+    <div class="ti">Enterprise UX · B2B SaaS<span class="tdot"></span></div>
+    <div class="ti">Game UI Design<span class="tdot"></span></div>
+    <div class="ti">Delhi NCR<span class="tdot"></span></div>
+    <div class="ti">AI-Assisted Design<span class="tdot"></span></div>
+    <div class="ti">Figma Expert<span class="tdot"></span></div>
+    <div class="ti">MBA Pursuing · 2027<span class="tdot"></span></div>
+    <div class="ti">Google UX Certificate<span class="tdot"></span></div>
+    <div class="ti">2.5+ Years Experience<span class="tdot"></span></div>
+    <div class="ti">20+ Products Shipped<span class="tdot"></span></div>
+    <div class="ti">5 Live Apps<span class="tdot"></span></div>
+    <div class="ti">Enterprise UX · B2B SaaS<span class="tdot"></span></div>
+    <div class="ti">Game UI Design<span class="tdot"></span></div>
+    <div class="ti">Delhi NCR<span class="tdot"></span></div>
+    <div class="ti">AI-Assisted Design<span class="tdot"></span></div>
+    <div class="ti">Figma Expert<span class="tdot"></span></div>
+    <div class="ti">MBA Pursuing · 2027<span class="tdot"></span></div>
+    <div class="ti">Google UX Certificate<span class="tdot"></span></div>
+  </div>
+</div>
+
+<section class="sec about-sec">
+  <div class="inn">
+    <div class="ag">
+      <div class="atext rv">
+        <span class="sl">About Me</span>
+        <h2 class="st">Designing with intent,<br>thinking like a PM.</h2>
+        <p>I'm Laxmi — a <strong>product-focused UX Designer</strong> based in Delhi with 2.5+ years of experience designing digital interfaces across B2B logistics platforms, mobile apps, and gaming products.</p>
+        <p>Currently at <strong>Skye Air Mobility</strong>, I own the end-to-end design of enterprise platforms — Fleet Management, Operations Portal, UTM Platform. Before that, I shipped <strong>20+ mobile games and apps</strong> at Kickr Technology, all live on Play Store and App Store.</p>
+        <p>I hold a BCA degree and am pursuing an <strong>MBA in Marketing & Product Strategy</strong>. My goal is to grow into Product Management — and eventually, academia.</p>
+        <div class="astats">
+          <div class="astat rv d1"><div class="asn">2.5<em>+</em></div><div class="asl">Years Experience</div></div>
+          <div class="astat rv d2"><div class="asn">20<em>+</em></div><div class="asl">Products Shipped</div></div>
+          <div class="astat rv d3"><div class="asn">5<em>+</em></div><div class="asl">Live Apps</div></div>
+        </div>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="about.html" class="btn btn-b">My Full Story <span class="ar">→</span></a>
+          <a href="hire.html" class="btn btn-d">Hire Me <span class="ar">→</span></a>
+        </div>
+      </div>
+      <div class="acards">
+        <div class="ac rv d1"><div class="aci">🏢</div><div class="act">Enterprise UX & B2B SaaS</div><div class="acd">Fleet management systems, operations portals, UTM platforms and logistics dashboards at Skye Air Mobility. Designing for teams who depend on software every single day.</div></div>
+        <div class="ac rv d2"><div class="aci">🎮</div><div class="act">Gaming Products</div><div class="acd">20+ mobile games shipped live — Queen Ludo, Coin Ludo, Jelly Match, Dino, Worm IO and more. Full game UI from lobby to win/lose screens.</div></div>
+        <div class="ac rv d3"><div class="aci">📱</div><div class="act">Mobile & Healthcare Apps</div><div class="acd">YourGynac on Apple App Store, educational apps, dashboards and websites — designed end-to-end across iOS and Android.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inn">
+    <div class="rv" style="margin-bottom:56px">
+      <span class="sl">Selected Work</span>
+      <h2 class="st">Things I've built and shipped.</h2>
+      <p class="ss">Enterprise platforms, mobile games, healthcare apps. Click any project to read the full story.</p>
+    </div>
+    <div class="wgrid">
+      <a href="case-fms.html" class="wc wide rv">
+        <div class="wth"><div class="wthi bg-e"><span style="font-size:5rem;filter:drop-shadow(0 0 40px rgba(79,142,247,.7))">✦</span></div><span class="wb">Enterprise UX</span></div>
+        <div class="wi">
+          <div class="wtags"><span class="wtag">Enterprise</span><span class="wtag">Dashboard</span><span class="wtag">Design System</span><span class="wtag">B2B SaaS</span></div>
+          <div class="wco">Skye Air Mobility · Current Role</div>
+          <div class="wt">Fleet Management System</div>
+          <div class="wd">End-to-end UX for Skye Air's internal drone fleet operations platform. Complex real-time data, multiple user roles, and dashboards that operations teams depend on daily.</div>
+          <span class="wlk">Read Full Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <a href="case-queenludo.html" class="wc rv d1">
+        <div class="wth"><div class="wthi bg-g"><span style="filter:drop-shadow(0 0 28px rgba(167,139,250,.9))">🎲</span></div><span class="wb">Game UI</span><span class="wlv"><span class="ld"></span>Live</span></div>
+        <div class="wi">
+          <div class="wtags"><span class="wtag wtag-p">Gaming</span><span class="wtag wtag-g">Play Store</span></div>
+          <div class="wco">Kickr Technology</div>
+          <div class="wt">Queen Ludo</div>
+          <div class="wd">Complete game UI — lobby, gameplay, rewards, onboarding and win/lose screens. Live on Google Play Store.</div>
+          <span class="wlk">Read Full Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+      <a href="case-yourgynac.html" class="wc rv d2">
+        <div class="wth"><div class="wthi bg-h"><span style="filter:drop-shadow(0 0 28px rgba(52,211,153,.9))">🩺</span></div><span class="wb">Healthcare · iOS</span><span class="wlv"><span class="ld"></span>Live</span></div>
+        <div class="wi">
+          <div class="wtags"><span class="wtag wtag-g">Healthcare</span><span class="wtag wtag-g">App Store</span></div>
+          <div class="wco">Kickr Technology</div>
+          <div class="wt">YourGynac</div>
+          <div class="wd">UX for a women's healthcare booking app — live on Apple App Store. Every detail had to earn trust.</div>
+          <span class="wlk">Read Full Case Study <span class="ar">→</span></span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:48px" class="rv"><a href="work.html" class="btn btn-d">View All Projects <span class="ar">→</span></a></div>
+  </div>
+</section>
+
+<section class="sec sk-sec">
+  <div class="inn">
+    <div class="rv">
+      <span class="sl" style="color:var(--amber)">Skills</span>
+      <h2 class="st" style="color:#fff">Built across real products.</h2>
+    </div>
+    <div class="sg">
+      <div class="skc rv d1"><span class="ski">🎨</span><div class="skn">UX & Product Design</div><div class="skps"><span class="skp">Wireframing</span><span class="skp">High-Fidelity Prototyping</span><span class="skp">Design Systems</span><span class="skp">User Flows</span><span class="skp">Information Architecture</span></div></div>
+      <div class="skc rv d2"><span class="ski">🔬</span><div class="skn">User Research & Strategy</div><div class="skps"><span class="skp">Usability Testing</span><span class="skp">User Journey Mapping</span><span class="skp">Personas</span><span class="skp">A/B Testing</span><span class="skp">Interaction Design</span></div></div>
+      <div class="skc rv d3"><span class="ski">🛠️</span><div class="skn">Tools & Technologies</div><div class="skps"><span class="skp">Figma</span><span class="skp">Adobe Photoshop</span><span class="skp">Adobe Illustrator</span><span class="skp">Jira</span><span class="skp">Trello</span><span class="skp">Agile/Scrum</span></div></div>
+      <div class="skc rv d1"><span class="ski">🏢</span><div class="skn">Domain Expertise</div><div class="skps"><span class="skp">B2B SaaS</span><span class="skp">Logistics Dashboards</span><span class="skp">iOS/Android Apps</span><span class="skp">Mobile Gaming</span><span class="skp">Enterprise UX</span></div></div>
+      <div class="skc rv d2"><span class="ski">🤖</span><div class="skn">AI-Assisted Design</div><div class="skps"><span class="skp">Midjourney</span><span class="skp">Adobe Firefly</span><span class="skp">Uizard</span><span class="skp">ChatGPT</span><span class="skp">Gamma</span><span class="skp">Canva AI</span></div></div>
+      <div class="skc rv d3"><span class="ski">🤝</span><div class="skn">Collaboration</div><div class="skps"><span class="skp">Cross-functional Teams</span><span class="skp">Dev Handoff</span><span class="skp">Product Thinking</span><span class="skp">Stakeholder Comms</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inn">
+    <div class="rv" style="margin-bottom:48px"><span class="sl">Experience</span><h2 class="st">Where I've worked.</h2></div>
+    <div class="el">
+      <div class="er rv">
+        <div class="ep">Nov 2025 – Present</div>
+        <div>
+          <div class="etit">UI/UX Designer <span class="cbadge"><span class="ld" style="background:#059669"></span>Current</span></div>
+          <div class="eco">Skye Air Mobility · Delhi, India</div>
+          <div class="ed">Own end-to-end product design for high-traffic internal dashboards and autonomous logistics platforms. Architected a scalable design system in Figma reducing front-end handoff friction. Translated complex logistics telemetry data into intuitive user flows that streamlined operator workflows.</div>
+          <div class="ecs"><span class="ec">Enterprise UX</span><span class="ec">Design Systems</span><span class="ec">B2B SaaS</span><span class="ec">Logistics</span><span class="ec">Figma</span><span class="ec">Usability Testing</span></div>
+        </div>
+      </div>
+      <div class="er rv">
+        <div class="ep">Aug 2024 – Oct 2025</div>
+        <div>
+          <div class="etit">UI/UX Designer</div>
+          <div class="eco">Kickr Technology · Noida, India</div>
+          <div class="ed">Designed end-to-end interface architecture for 20+ mobile gaming titles including Queen Ludo, Dino, and Worm IO. Transformed complex game mechanics into high-fidelity UI screens that boosted day-1 user retention. Resolved critical drop-off points in onboarding through data-driven design optimisation.</div>
+          <div class="ecs"><span class="ec">Game UI</span><span class="ec">Mobile Apps</span><span class="ec">iOS & Android</span><span class="ec">Component Libraries</span><span class="ec">Agile</span></div>
+        </div>
+      </div>
+      <div class="er rv">
+        <div class="ep">Mar 2024 – Aug 2024</div>
+        <div>
+          <div class="etit">Graphic Designer</div>
+          <div class="eco">Xomach Infotech Pvt Ltd · Delhi, India</div>
+          <div class="ed">Developed cohesive visual identity frameworks, branding assets, and digital marketing collateral. Partnered with marketing teams to translate brand guidelines into scalable visual assets — increasing click-through rates by 82% across digital channels.</div>
+          <div class="ecs"><span class="ec">Branding</span><span class="ec">Visual Design</span><span class="ec">Photoshop</span><span class="ec">Illustrator</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap" class="rv">
+      <a href="experience.html" class="btn btn-b">Full Experience <span class="ar">→</span></a>
+      <a href="hire.html" class="btn btn-d">Download Resume <span class="ar">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="ctasec">
+  <div class="inn rv">
+    <span class="sl">Let's Talk</span>
+    <h2 class="st">Have a product that needs great UX?</h2>
+    <p class="ss">I'm open to UX Designer and Product Designer roles in Delhi NCR. Full-time, in-office or hybrid near metro.</p>
+    <a href="mailto:laxmivk2410@gmail.com" class="cemail">laxmivk2410@gmail.com</a>
+    <div class="crow">
+      <a href="hire.html" class="btn btn-b">Hire Me <span class="ar">→</span></a>
+      <a href="https://www.linkedin.com/in/laxmivk" target="_blank" rel="noopener" class="btn btn-o">LinkedIn <span class="ar">→</span></a>
+      <a href="Laxmi_new_Resume__1_.pdf" download class="btn btn-o" style="border-color:rgba(245,158,11,.4);color:var(--amber)">Download Resume <span class="ar">↓</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="fb">LS<span>.</span> Laxmi Sharma</div>
+  <p class="fc">© 2026 Laxmi Sharma · UX Designer · Delhi NCR</p>
+  <div class="fl"><a href="work.html">Work</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="hire.html">Hire Me</a></div>
+</footer>
+<script>
+window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('gone')},1400)});
+const nb=document.getElementById('nb');
+window.addEventListener('scroll',()=>{nb.classList.toggle('s',window.scrollY>40)},{passive:true});
+const gl=document.getElementById('gl');
+document.querySelector('.hero').addEventListener('mousemove',e=>{const r=e.currentTarget.getBoundingClientRect();gl.style.transform=`translate(${e.clientX-r.left-300}px,${e.clientY-r.top-300}px)`});
+const hb=document.getElementById('hb'),mn=document.getElementById('mnav');
+let op=false;
+hb.addEventListener('click',()=>{op=!op;mn.classList.toggle('open',op);hb.setAttribute('aria-expanded',op)});
+function cn(){op=false;mn.classList.remove('open');hb.setAttribute('aria-expanded',false)}
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
